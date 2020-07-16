@@ -1,21 +1,14 @@
-import React from 'react';
-import './App.css';
-import UserForm from './components/UserForm';
-import Button from '@material-ui/core/Button'
-
+import React from "react";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import UserForm from "./components/UserForm";
 
 function App() {
   return (
-    <div className="App">
-			<UserForm />
-
-      <br />
-      <Button variant="contained" color="primary">
-        Hello
-      </Button>
-
-
-    </div>
+    <>
+      <CssBaseline>
+        <UserForm />
+      </CssBaseline>
+    </>
   );
 }
 
