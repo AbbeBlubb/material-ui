@@ -52,73 +52,75 @@ function UserForm() {
     alert(`Hello ${firstName} ${lastName}`);
     resetFirstName();
     resetLastName();
-    setChecked(false)
+    setChecked(false);
   };
 
   return (
-    <Container component="main" maxWidth="xs" className={classes.paper}>
-      <Avatar className={classes.avatar}>
-        <ChatBubbleOutlineIcon />
-      </Avatar>
+    <>
+      <Container component="main" maxWidth="xs" className={classes.paper}>
+        <Avatar className={classes.avatar}>
+          <ChatBubbleOutlineIcon />
+        </Avatar>
 
-      <Typography component="h1" variant="h5">
-        Fire an alert
-      </Typography>
+        <Typography component="h1" variant="h5">
+          Fire an alert
+        </Typography>
 
-      <form className={classes.form}>
-        <div>
-          <TextField
-            label="First Name"
-            variant="filled"
-            margin="normal"
-            fullWidth
-            {...bindFirstName}
-          />
+        <form className={classes.form}>
+          <div>
+            <TextField
+              label="First Name"
+              variant="filled"
+              margin="normal"
+              fullWidth
+              {...bindFirstName}
+            />
 
-          {/*
+            {/*
           <input 
-            type='text'
-            value={firstName}
-            onChange={() => setFirstName(e.target.value)}
-          */}
-        </div>
+          type='text'
+          value={firstName}
+          onChange={() => setFirstName(e.target.value)}
+        */}
+          </div>
 
-        <div>
-          <TextField
-            label="Last name"
-            variant="filled"
-            margin="normal"
-            fullWidth
-            {...bindLastName}
-          />
+          <div>
+            <TextField
+              label="Last name"
+              variant="filled"
+              margin="normal"
+              fullWidth
+              {...bindLastName}
+            />
 
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={checked}
-                name="understood"
-                value="The string to use as the value of the checkbox when submitting the form, if the checkbox is currently toggled on"
-                color="primary"
-                onClick={(e) => {
-                  setChecked(!checked);
-                }}
-              />
-            }
-            label="I understand that I will trigger an alert"
-          />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={checked}
+                  name="understood"
+                  value="The string to use as the value of the checkbox when submitting the form, if the checkbox is currently toggled on"
+                  color="primary"
+                  onClick={(e) => {
+                    setChecked(!checked);
+                  }}
+                />
+              }
+              label="I understand that I will trigger an alert"
+            />
 
-          <Button
-            className={classes.submitButton}
-            variant="contained"
-            color="primary"
-            fullWidth
-            onClick={submitHandler}
-          >
-            Submit
-          </Button>
-        </div>
-      </form>
-    </Container>
+            <Button
+              className={classes.submitButton}
+              variant="contained"
+              color="primary"
+              fullWidth
+              onClick={submitHandler}
+            >
+              Submit
+            </Button>
+          </div>
+        </form>
+      </Container>
+    </>
   );
 }
 
