@@ -1,14 +1,17 @@
 import React from "react";
 import useInput from "../hooks/useInput";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import Avatar from "@material-ui/core/Avatar";
-import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import {
+  Button,
+  TextField,
+  FormControlLabel,
+  Checkbox,
+  Avatar,
+  Container,
+  Typography,
+  makeStyles,
+} from "@material-ui/core";
+
 
 const useStyles = makeStyles({
   paper: {

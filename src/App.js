@@ -1,14 +1,16 @@
 import React from "react";
 import UserForm from "./components/UserForm";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
-import Hidden from "@material-ui/core/Hidden";
+import { Grid, CssBaseline, Hidden } from "@material-ui/core";
 
 function App() {
   return (
-    <>
-      <CssBaseline>
-        <Grid container>
+    <CssBaseline>
+      <Grid container>
+        <Grid container item>
+          Header
+        </Grid>
+
+        <Grid container item>
           <Grid
             item
             xs={false}
@@ -19,10 +21,12 @@ function App() {
           >
             <Hidden xsDown>Grid item, Hidden xsDown</Hidden>
           </Grid>
+
           <Grid item xs={12} sm={8} md={6} lg={4}>
             Grid item
             <UserForm />
           </Grid>
+
           <Grid
             item
             xs={false}
@@ -34,8 +38,14 @@ function App() {
             <Hidden xsDown>Grid item, Hidden xsDown</Hidden>
           </Grid>
         </Grid>
-      </CssBaseline>
-    </>
+
+        <Grid>
+          <Grid container item>
+            Footer
+          </Grid>
+        </Grid>
+      </Grid>
+    </CssBaseline>
   );
 }
 
